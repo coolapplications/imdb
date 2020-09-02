@@ -12,7 +12,7 @@ export default function SearchBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position='static' color='transparent'>
         <Toolbar>
           <IconButton
             edge='start'
@@ -23,10 +23,10 @@ export default function SearchBar() {
           <Typography className={classes.title} variant='h6' noWrap>
             SHOW
           </Typography>
+          <div className={classes.searchIcon}>
+            <SearchIcon />
+          </div>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
             <InputBase
               placeholder='Search…'
               classes={{

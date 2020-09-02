@@ -31,7 +31,7 @@ export const searchBarStyles = makeStyles((theme) => ({
   searchIcon: {
     padding: theme.spacing(0, 2),
     height: '100%',
-    position: 'absolute',
+    //position: 'absolute',
     pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
