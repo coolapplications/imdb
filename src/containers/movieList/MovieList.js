@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMovies } from '../../apiCalls';
+import SearchBar from '../../components/searchBar/SearchBar';
+import MovieCard from '../../components/movieCard/MovieCard';
 
 export function MovieList() {
   const dispatch = useDispatch();
@@ -9,9 +11,14 @@ export function MovieList() {
   console.log(rows);
   return (
     <div>
+      <SearchBar />
       List:
       {rows?.map((movie) => (
-        <div key={movie.id}>{movie.original_title}</div>
+        <MovieCard
+          key={movie.id}
+          title={movie.original_title}
+          poster={movie.poster_path}
+        />
       ))}
     </div>
   );
