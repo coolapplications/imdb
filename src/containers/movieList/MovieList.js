@@ -1,28 +1,16 @@
 import React, { useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { movieListStyles } from '../../styles';
 import Grid from '@material-ui/core/Grid';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMovies } from '../../apiCalls';
 import SearchBar from '../../components/searchBar/SearchBar';
 import MovieCard from '../../components/movieCard/MovieCard';
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    height: 200,
-    width: 300,
-  },
-  control: {
-    padding: theme.spacing(2),
-  },
-}));
 
 export function MovieList() {
   const dispatch = useDispatch();
   useEffect(() => dispatch(getMovies()), [dispatch]);
   const rows = useSelector((state) => state.moviesReducer.data?.results);
-  const classes = useStyles();
+  const classes = movieListStyles();
   return (
     <div>
       <SearchBar />

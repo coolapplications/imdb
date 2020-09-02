@@ -31,7 +31,6 @@ export const searchBarStyles = makeStyles((theme) => ({
   searchIcon: {
     padding: theme.spacing(0, 2),
     height: '100%',
-    //position: 'absolute',
     pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
@@ -52,5 +51,27 @@ export const searchBarStyles = makeStyles((theme) => ({
         width: '20ch',
       },
     },
+  },
+}));
+
+export const cardStyles = makeStyles({
+  root: {
+    maxWidth: 300,
+  },
+  media: {
+    height: 200,
+  },
+});
+
+export const movieListStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    height: 200,
+    width: 300,
+  },
+  control: {
+    padding: theme.spacing(2),
   },
 }));
